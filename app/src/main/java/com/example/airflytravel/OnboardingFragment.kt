@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 
 class OnboardingFragment : Fragment() {
@@ -39,7 +40,7 @@ class OnboardingFragment : Fragment() {
             },
 
             onSkip = {
-                Toast.makeText(requireContext(), "Got To LOgin", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_onboardingFragment2_to_loginFragment)
             }
         )
 
