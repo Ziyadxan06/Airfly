@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.example.airflytravel.databinding.FragmentOnboardingBinding
 
 class OnboardingFragment : Fragment() {
 
+    private var _binding: FragmentOnboardingBinding? = null
+    private val binding get() = _binding!!
     lateinit var pages: List<OnboardingPage>
 
     override fun onCreateView(
@@ -18,13 +21,14 @@ class OnboardingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding, container, false)
+        _binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = view.findViewById<ViewPager2>(R.id.onboardingPager)
+        val viewPager = binding.onboardingPager
 
         pages = listOf(
             OnboardingPage(R.drawable.ic_launcher_background, "Salam", "necesiz", false),

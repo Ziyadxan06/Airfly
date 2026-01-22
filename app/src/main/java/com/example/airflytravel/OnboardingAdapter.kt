@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.Visibility
+import com.example.airflytravel.databinding.ItemOnboardingPageBinding
 
 class OnboardingAdapter(
     val pages: List<OnboardingPage>,
@@ -18,8 +19,8 @@ class OnboardingAdapter(
         parent: ViewGroup,
         viewType: Int
     ): PageViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_onboarding_page, parent, false)
-        return PageViewHolder(view)
+        val binding = ItemOnboardingPageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return PageViewHolder(binding)
     }
 
     override fun onBindViewHolder(
@@ -57,11 +58,11 @@ class OnboardingAdapter(
         return pages.size
     }
 
-    class PageViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val imagePager = itemView.findViewById<ImageView>(R.id.imageViewPager)
-        val cardTitlePager = itemView.findViewById<TextView>(R.id.cardTitle)
-        val cardDescriptionPager = itemView.findViewById<TextView>(R.id.cardDescription)
-        val btnNext = itemView.findViewById<Button>(R.id.btnNext)
-        val btnSkip = itemView.findViewById<Button>(R.id.btnSkip)
+    class PageViewHolder(val binding: ItemOnboardingPageBinding): RecyclerView.ViewHolder(binding.root){
+        val imagePager = binding.imageViewPager
+        val cardTitlePager = binding.cardTitle
+        val cardDescriptionPager = binding.cardDescription
+        val btnNext = binding.btnNext
+        val btnSkip = binding.btnSkip
     }
 }
