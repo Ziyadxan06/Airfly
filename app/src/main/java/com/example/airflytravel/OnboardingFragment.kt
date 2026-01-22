@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.viewpager2.widget.ViewPager2
 
 class OnboardingFragment : Fragment() {
+
+    lateinit var pages: List<OnboardingPage>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,5 +22,29 @@ class OnboardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val viewPager = view.findViewById<ViewPager2>(R.id.onboardingPager)
+
+        pages = listOf(
+            OnboardingPage(R.drawable.ic_launcher_background, "Salam", "necesiz", false),
+            OnboardingPage(R.drawable.ic_launcher_background, "Salam2", "necesiz", false),
+            OnboardingPage(R.drawable.ic_launcher_background, "Salam3", "necesiz", true)
+        )
+
+        val adapter = OnboardingAdapter(
+            pages,
+
+            onNext = { position ->
+                viewPager.currentItem = position+1
+            },
+
+            onSkip = {
+                Toast.makeText(requireContext(), "Got To LOgin", Toast.LENGTH_SHORT).show()
+            }
+        )
+
+        viewPager.adapter = adapter
+
+
     }
 }
