@@ -11,9 +11,9 @@ import androidx.transition.Visibility
 import com.example.airflytravel.databinding.ItemOnboardingPageBinding
 
 class OnboardingAdapter(
-    val pages: List<OnboardingPage>,
-    val onNext: (position: Int) -> Unit,
-    val onSkip: () -> Unit
+    private val pages: List<OnboardingPage>,
+    private val onNext: (position: Int) -> Unit,
+    private val onSkip: () -> Unit
 ): RecyclerView.Adapter<OnboardingAdapter.PageViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,

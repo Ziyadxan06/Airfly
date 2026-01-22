@@ -14,7 +14,7 @@ class OnboardingFragment : Fragment() {
 
     private var _binding: FragmentOnboardingBinding? = null
     private val binding get() = _binding!!
-    lateinit var pages: List<OnboardingPage>
+    private lateinit var pages: List<OnboardingPage>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
