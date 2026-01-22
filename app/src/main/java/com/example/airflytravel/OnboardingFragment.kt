@@ -31,9 +31,9 @@ class OnboardingFragment : Fragment() {
         val viewPager = binding.onboardingPager
 
         pages = listOf(
-            OnboardingPage(R.drawable.ic_launcher_background, "Salam", "necesiz", false),
-            OnboardingPage(R.drawable.ic_launcher_background, "Salam2", "necesiz", false),
-            OnboardingPage(R.drawable.ic_launcher_background, "Salam3", "necesiz", true)
+            OnboardingPage(R.drawable.illustration_onboarding_1, "Plan a Trip", "Plan trip to more 90 countries with few taps on your mobile screen.", false),
+            OnboardingPage(R.drawable.illustration_onboarding_2, "Start Your Journey", "Hassle-free and quick flight booking to and one of the 250 destinations.", false),
+            OnboardingPage(R.drawable.illustration_onboarding_3, "Trip Schedule", "Hassle-free and quick flight booking to and one of the 250 destinations.", true)
         )
 
         val adapter = OnboardingAdapter(
