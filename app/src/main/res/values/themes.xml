@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.AirFlyTravel" parent="Base.Theme.AirFlyTravel" />
+    <style name="Theme.AirFlyTravel.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">
+            @color/splash_background
+        </item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/ic_splash_logo
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.AirFlyTravel
+        </item>
+    </style>
 </resources>
