@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import com.example.airflytravel.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AuthMethodPickerFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
@@ -72,6 +73,15 @@ class AuthMethodPickerFragment : Fragment() {
         tvTerms.text = spannable
         tvTerms.movementMethod = LinkMovementMethod.getInstance()
         tvTerms.highlightColor = Color.TRANSPARENT
+
+        binding.signinOptionsTextView.setOnClickListener {
+            showBottomSheet()
+        }
+    }
+
+    private fun showBottomSheet() {
+        val bottomSheet = BottomSheet()
+        bottomSheet.show(childFragmentManager, "MyBottomSheetTag")
     }
 
     override fun onDestroyView() {
