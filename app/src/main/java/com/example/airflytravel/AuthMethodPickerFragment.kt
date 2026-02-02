@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.airflytravel.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 class AuthMethodPickerFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
