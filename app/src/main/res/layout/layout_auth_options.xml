@@ -1,19 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/btn_google"
+
+    <TextView
+        android:id="@+id/authOptionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="59dp"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Welcome to airfly ✈️"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/authOptionsDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Google ilə davam et" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="If you are alrady have procery account, enter your email below."
+        android:textColor="@color/desc_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authOptionsTitle" />
 
-    <Button
-    android:id="@+id/btn_email"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:text="Email ilə giriş" />
-</LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/splash_background"
+        android:textColor="@color/white"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Continue with Email"
+        android:textSize="14sp"
+        app:cornerRadius="11sp"
+        app:icon="@drawable/ic_email"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authOptionsDescription" />
+
+    <TextView
+        android:id="@+id/tvSignInWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign in with"
+        android:textColor="@color/desc_gray"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueWithEmail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/splash_background"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Continue with Google"
+        android:textSize="14sp"
+        app:cornerRadius="11sp"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/splash_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignInWith" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/splash_background"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Continue with Facebook"
+        android:textSize="14sp"
+        app:cornerRadius="11sp"
+        app:icon="@drawable/ic_facebook"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/splash_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueWithGoogle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueWithApple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/splash_background"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Continue with Apple"
+        android:textSize="14sp"
+        app:cornerRadius="11sp"
+        app:icon="@drawable/ic_apple"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/splash_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueWithFacebook" />
+
+    <TextView
+        android:id="@+id/tvRegisterMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/desc_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnContinueWithApple" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

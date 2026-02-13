@@ -1,6 +1,12 @@
 package com.example.airflytravel
 
+import android.graphics.Color
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ForegroundColorSpan
+import android.text.style.UnderlineSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +31,32 @@ class BottomSheet: BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val tvRegisterMessage = binding.tvRegisterMessage
+
+        val text = "Don’t have an account? Register"
+        val spannable = SpannableString(text)
+
+        val registerStart = text.indexOf("Register")
+        val registerEnd = registerStart + "Register".length
+
+        spannable.setSpan(
+            ForegroundColorSpan(Color.parseColor("#207DFF")),
+            registerStart,
+            registerEnd,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        spannable.setSpan(
+            UnderlineSpan(),
+            registerStart,
+            registerEnd,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        tvRegisterMessage.text = spannable
+        tvRegisterMessage.movementMethod = LinkMovementMethod.getInstance()
+        tvRegisterMessage.highlightColor = Color.TRANSPARENT
     }
 
     override fun onDestroyView() {
