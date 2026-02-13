@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash_background">#207DFF</color>
     <color name="desc_gray">#AAAAAA</color>
+    <color name="material_white">#FAFAFA</color>
 </resources>
