@@ -64,6 +64,10 @@ class SignInFragment : Fragment() {
         tvExistsAccount.text = tvSpannable
         tvExistsAccount.movementMethod = LinkMovementMethod.getInstance()
         tvExistsAccount.highlightColor = Color.TRANSPARENT
+
+        binding.tvForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)
+        }
     }
 
     override fun onDestroyView() {
