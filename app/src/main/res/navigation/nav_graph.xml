@@ -52,4 +52,13 @@
             android:id="@+id/action_forgotPasswordFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/emailSentFragment"
+        android:name="com.example.airflytravel.EmailSentFragment"
+        android:label="fragment_email_sent"
+        tools:layout="@layout/fragment_email_sent" >
+        <action
+            android:id="@+id/action_emailSentFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
 </navigation>
