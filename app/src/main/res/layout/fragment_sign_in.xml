@@ -170,7 +170,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
             android:layout_marginEnd="25dp"
-            android:background="@drawable/underline"
+            android:background="@drawable/underline_blue"
             android:fontFamily="@font/poppins_medium"
             android:text="Forgot Password?"
             android:textColor="@color/splash_background"
