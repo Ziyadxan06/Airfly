@@ -248,7 +248,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tilConfirmation" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnContinueWithEmail"
+            android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -265,7 +265,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cbTerms" />
 
         <TextView
-            android:id="@+id/tvExistAccount"
+            android:id="@+id/accountExistsMessageSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -274,7 +274,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnContinueWithEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

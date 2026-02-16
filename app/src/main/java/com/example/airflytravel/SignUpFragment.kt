@@ -33,7 +33,7 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val tvCheckBox = binding.tvCheckBox
-        val tvExistAccount = binding.tvExistAccount
+        val tvExistAccount = binding.accountExistsMessageSignUp
 
         val cbText = "I agree with Terms & Conditions"
         val tvText = "have an account? Sign In"
