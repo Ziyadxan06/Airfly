@@ -42,7 +42,7 @@ class EmailSentFragment : Fragment() {
 
         val tvClikableSpan = object : ClickableSpan(){
             override fun onClick(p0: View) {
-                findNavController().navigate(R.id.action_emailSentFragment_to_forgotPasswordFragment )
+                //findNavController().navigate(R.id.action_emailSentFragment_to_forgotPasswordFragment )
             }
 
             override fun updateDrawState(ds: TextPaint) {
