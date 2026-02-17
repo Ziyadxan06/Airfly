@@ -19,4 +19,11 @@
             @style/Theme.AirFlyTravel
         </item>
     </style>
+
+    <style name="RoundedCornersDialog" parent="Theme.Material3.Light.Dialog">
+        <item name="shapeAppearanceOverlay">@style/ButtonCorners</item>
+    </style>
+
+    <style name="ButtonCorners" parent="">
+        <item name="cornerSize">50dp</item> </style>
 </resources>
