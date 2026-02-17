@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SuccessDialogFragment">
+
+    <ImageView
+        android:id="@+id/dialogImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/success_illustration" />
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:textSize="30sp"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your account is ready to use. You will be redirected to the home page in a few seconds."
+        android:gravity="center"
+        android:textColor="@color/desc_gray"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/splash_background"
+        android:fontFamily="@font/anekbangla_semibold"
+        android:text="Back To Home"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="11sp" />
+
+</LinearLayout>
